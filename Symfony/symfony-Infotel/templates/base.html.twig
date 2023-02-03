@@ -3,51 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link type="text/css" rel="stylesheet" href="{{asset('./css/estilos.css')}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="./css/estilos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="./javascript/onload.js"></script>
+    <script type="text/javascript" src="./javascript/redirecciones.js"></script>
+    <script type="text/javascript" src="./javascript/menu.js"></script>
+    <script type="text/javascript" src="./javascript/productos.js"></script>
     
-    <title>{% block title %}Infotel {% endblock %}</title>
+    <title>Infotel</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Icon Font Stylesheet -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
     <link href="{{asset('lib/flaticon/font/flaticon.css')}}" rel="stylesheet">
-    
+
+    <!-- Libraries Stylesheet -->
+    <link href="{{asset('lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
 
 </head>
 <body>
-<div id="contenedor">
-    <header class="encabezado">
-        <img src="{{asset('./img/logo.png')}}" id="logo" href="{{ path('index')}}">
-        <div class="textoheader">
-            <h1 id="titulo">Infotel</h1>
-            <p id="texto">Tu tienda de smartphones de confianza.</p>
+    <!-- Header -->
+    
+    <div class="navbar navbar-expand-lg bg-white navbar-light shadow-sm py-3 py-lg-0 px-3 px-lg-0 sticky-top" id="nav">
+        <div class="col">
+            <a href=""><img class="img-responsive" id="img" src="./img/logo.png"></a>
         </div>
-        <nav class="barra_de_navegacion" id="barra_de_navegacion">
-            <ul>
-                <li><a id="inicio" href="{{ path('index') }}">Inicio</a></li>
-                <li><a id="productos" href="{{ path('productos') }}">Productos</a></li>
-                <li><a id="contacto" href="{{ path('contacto') }}">Contacto</a></li>
-                <li><a id="carrito" href ="{{ path('app_cart' )}}">Carrito</a></li>
-            </ul>
-        </nav>
-        <div class="menu-toogle" id="icono">
-            <i class="fa fa-bars"></i>
-        </div>
-        <div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
-            style="height: 100%; width: 100%;">
-            <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
-                style="stroke: none; fill: #fff;"></path>
-        </svg>
-        </div>
-    </header>
+        
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{path('index')}}">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="{{path('productos')}}">Productos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="{{path('contacto')}}">Contacto</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </div>
+    <!-- Fin Header -->
 
     {% block body %}
     {% endblock %}
 
-    <footer class="pie-pagina">
+    <!-- Footer -->
+    <div class="row">
+      <footer class="col pie-pagina">
         <div class="grupo-1">
             <div class="box">
                 <h2>Infotel</h2>
@@ -72,15 +90,20 @@
             <small>&copy; 2022 <b>David Balaguer</b> - Todos los Derechos Reservados.</small>
         </div>
     </footer>
+    </div>
+    <!-- Fin footer -->
     {% include('partials/_infoProduct.html.twig') %}
     {% include('cart/cartModal.html.twig') %}
-</div>
-    
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+        <!-- Template Javascript -->
     <script type="text/javascript" src="{{asset('./javascript/menu.js')}}"></script>
     <script type="text/javascript" src="{{asset('./javascript/productos.js')}}"></script>
     <script type="text/javascript" src="{{asset('./javascript/onload.js')}}"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="{{asset('./javascript/app.js')}}"></script>
+    
 </body>
 </html>

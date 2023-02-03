@@ -3,18 +3,20 @@
 {% block title%}Productos{% endblock %}
 
 {% block body %}
-    <section class="productos" id="producto">
-        <h2>Todos nuestros productos</h2>
-        <div class="contenedor_productos">
+    
+<div class="row">
+        <div class="col bg-white text-center">
+          <h2>Todos nuestros productos</h2>
+          <div class="contenedorProductos ">
             {% for product in products %}
             <div class="producto">
                 <img src="img/{{ product.photo }}" alt="smartphone 1">
                 <h3>{{ product.name }}</h3>
                 <p>
                     <strong>-Marca:</strong> {{ product.brand }}<br>
-{#                     <strong>-Procesador:</strong>{{ product.processor }}<br>
+                    <strong>-Procesador:</strong>{{ product.processor }}<br>
                     <strong>-Ram:</strong> {{product.ram}}GB<br>
-                    <strong>-Almacenamiento:</strong> {{product.storage}}GB<br> #}
+                    <strong>-Almacenamiento:</strong> {{product.storage}}GB<br> 
                     <strong>-Precio:</strong> {{ product.price }}€<br>
                 </p>
                 <div class="btn-action d-flex justify-content-center">
@@ -23,8 +25,8 @@
                         </div>
             </div>
             {% endfor %}
-            
+          </div>
+
         </div>
-        
-    </section>
+      </div>
 {% endblock %}
