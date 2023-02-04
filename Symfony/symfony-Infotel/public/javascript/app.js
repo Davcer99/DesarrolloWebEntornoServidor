@@ -2,7 +2,7 @@
 (function(){
     const totalItems = $("#totalItems");
     const infoProduct = $("#infoProduct");
-    $( "a.open-info-product" ).click(function(event) {
+    $( "button.open-info-product" ).click(function(event) {
       event.preventDefault();
       const id = $( this ).attr('data-id');
       const href = `/api/show/${id}`;
@@ -23,7 +23,7 @@
 
     const cartModal = $("#cart-modal");
   
-  $( "a.open-cart-product" ).click(function(event) {
+  $( "button.open-cart-product" ).click(function(event) {
     event.preventDefault();
     const id = $( this ).attr('data-id');
     const href = `/cart/add/${id}`;

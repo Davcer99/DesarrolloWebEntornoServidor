@@ -66,37 +66,6 @@ body{
 }
 /* Fin busqueda */
 
-/* Productos mas vendidos */
-.producto{
-    width: 300px;
-    margin: 20px;
-    background-color: white;
-    text-align: center;
-    border-radius: 3%;
-    padding: 20px;
-} 
-.producto img{
-   width: 100%;
-}
-
-.producto h3{
-    color: #090979;
-}
-
-.producto button{
-    margin: 20px;
-    background-color: #090979;
-    color: white;
-    padding: 15px;
-    border-radius: 20px;
-}
-section h2{
-    color: #090979;
-    margin: 0;
-    padding-top: 30px;
-}
-/* Fin productos mas vendidos */
-
 /* Listado productos */
 .contenedorProductos{
     display: flex;
@@ -107,29 +76,61 @@ section h2{
 }
 
 .producto{
-    width: 300px;
-    margin: 20px;
-    background-color: white;
+    width: 350px;
+    margin: 40px;
+    background-color: whitesmoke;
     text-align: center;
-    border-radius: 3%;
+    border-radius: 20px;
     padding: 20px;
 } 
+.producto:hover{
+    transform: scale(1.2);
+} 
 .producto img{
-   width: 100%;
+   width: auto;
+   border-radius: 20px;
+   height: 400px;
 }
 
 .producto h3{
     color: #090979;
 }
 
-.producto button{
-    margin: 20px;
-    background-color: #090979;
-    color: white;
-    padding: 15px;
-    border-radius: 20px;
+#grupoBotones{
+    width: 200px;
+    
 }
+#grupoBotones button{
+    background-color: #090979;
+    border: #090979;
+}
+#grupoBotones button:hover{
+    background-color: #0a0aaa;
+}
+
 /* Fin listado productos */
+
+/* Contacto */
+.borderContacto {
+    border-left: 1px solid #090979 !important;
+}
+
+.borderContacto h6{
+    color: #090979 !important;
+}
+.btn{
+    background-color: #090979 !important;
+    border: #090979 !important;
+}
+
+.btn:hover{
+    background-color: #0a0aaa !important;
+}
+
+.bg-light i{
+    color: #090979 !important;
+}
+/* Fin contacto */
 
 /* Pie de página */
 .pie-pagina{
