@@ -132,6 +132,19 @@ body{
 }
 /* Fin contacto */
 
+/* Carrito de la compra */
+
+.cart{
+    background-color: whitesmoke;
+}
+/* Fin carrito de la compra */
+
+/* Info prodcut */
+.contenedorImagen{
+    height: 300px;
+}
+/* Fin info prodcut */
+
 /* Pie de página */
 .pie-pagina{
     width: 100%;

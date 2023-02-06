@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/css" rel="stylesheet" href="./css/estilos.css">
+    <link type="text/css" rel="stylesheet" href="{{asset('./css/estilos.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     
@@ -28,7 +28,7 @@
     
     <div class="navbar navbar-expand-lg bg-white navbar-light shadow-sm py-3 py-lg-0 px-3 px-lg-0 sticky-top" id="nav">
         <div class="col">
-            <a href="{{ path('index')}}"><img class="img-responsive" id="img" src="./img/logo.png"></a>
+            <a href="{{ path('index')}}"><img class="img-responsive" id="img" src="{{asset('./img/logo.png')}}"></a>
         </div>
         
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -47,6 +47,9 @@
                   </li>
                   <li class="nav-item">
                     <a class="nav-link active" href="{{path('contacto')}}">Contacto</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="{{path('app_cart')}}">Carrito</a>
                   </li>
                 </ul>
               </div>
