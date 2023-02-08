@@ -22,6 +22,8 @@ body{
 }
 .navbar-nav li a:hover{
     transform: scale(1.5);
+    text-decoration: none;
+    color: #090979 !important;
     
 }
 /* Fin navegacion */
@@ -32,20 +34,26 @@ body{
     background: hsla(243, 100%, 7%, 0.151);
     background: linear-gradient(90deg, rgba(2, 0, 36, 0.5) 0%, rgba(9,9,121,0.5) 35%, rgba(0,212,255,0.5) 100%);
 }
+
 #textoVentana{
     color: white;
     text-align: center;
 }
 #textoVentana h1{
    margin: 200px 0px 30px;
+   font-size: 70px;
 }
 /* Fin ventana */
 
 /* Carrusel Productos */
+#contenedorCarrusel h2{
+    color: #090979;
+    margin-bottom: 20px;
+}
 #contenedorCarrusel{
     padding: 40px;
 }
-#contenedorCarrusel h1{
+#contenedorCarrusel h2{
     margin-bottom: 20px;
     
 }
@@ -63,6 +71,10 @@ body{
 .busqueda{
     background-color: whitesmoke;
     height: 250px;
+}
+.busqueda h2{
+    color: #090979;
+    margin-top: 60px;
 }
 /* Fin busqueda */
 
