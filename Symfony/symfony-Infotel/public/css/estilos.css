@@ -157,6 +157,12 @@ body{
 }
 /* Fin info prodcut */
 
+/* Login */
+    #login{
+        background-color: whitesmoke;
+    }
+/* Fin login */
+
 /* Pie de página */
 .pie-pagina{
     width: 100%;
