@@ -3,8 +3,12 @@
 {% block title %}Register{% endblock %}
 
 {% block body %}
-    <h1>Register</h1>
-
+<div id="register">
+    <div class="container bg-white">
+    <div class="borderContacto border-5  ps-5 mb-5" style="max-width: 600px;">
+            <h6 class="text-primary text-uppercase">Registrarse</h6>
+            <h1 class="display-5 text-uppercase mb-0">Porfavor introduzca sus datos</h1>
+        </div>
     {{ form_start(registrationForm) }}
         {{ form_row(registrationForm.email) }}
         {{ form_row(registrationForm.plainPassword, {
@@ -14,4 +18,6 @@
 
         <button type="submit" class="btn">Register</button>
     {{ form_end(registrationForm) }}
+    </div>
+</div>
 {% endblock %}

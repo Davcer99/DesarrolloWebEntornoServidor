@@ -7,9 +7,9 @@
 <div id="login">
     <div class="container bg-white">
         <div class="borderContacto border-5  ps-5 mb-5" style="max-width: 600px;">
-                <h6 class="text-primary text-uppercase">Contacta con nosotros</h6>
-                <h1 class="display-5 text-uppercase mb-0">Porfavor no dude en contactarnos</h1>
-            </div>
+            <h6 class="text-primary text-uppercase">Inicio sesion</h6>
+            <h1 class="display-5 text-uppercase mb-0">Porfavor inicie sesion con sus datos</h1>
+        </div>
         <form method="post" class='form-horizontal'>
             {% if error %}
                 <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
@@ -21,9 +21,8 @@
                 </div>
             {% endif %}
             <div class="contenidoFormulario">
-                <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
             
-                <input type="email" value="{{ last_username }}" name="email" placeholder="Nombre" id="inputEmail" class="form-control bg-light border-0 px-4 py-3" autocomplete="email" required autofocus>
+                <input type="email" value="{{ last_username }}" name="email" placeholder="Usuario" id="inputEmail" class="form-control bg-light border-0 px-4 py-3" autocomplete="email" required autofocus>
                 
                 <input type="password" placeholder="Contraseña" name="password" id="inputPassword" class="form-control bg-light border-0 px-4 py-3" autocomplete="current-password" required>
 

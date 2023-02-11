@@ -163,6 +163,12 @@ body{
     }
 /* Fin login */
 
+/* Register */
+#register{
+    background-color: whitesmoke;
+}
+/* Fin register */
+
 /* Pie de página */
 .pie-pagina{
     width: 100%;
