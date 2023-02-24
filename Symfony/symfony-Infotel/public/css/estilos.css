@@ -86,7 +86,19 @@ body{
     
     
 }
+ #titulo{
+    margin: 20px;
+    color: #090979;
+ }
+ #cuadradoPrecio{
+    background-color: #090979 !important;
 
+ }
+ 
+
+ #productName{
+    color: #090979 !important;
+ }
 .producto{
     width: 350px;
     margin: 40px;
@@ -106,6 +118,11 @@ body{
 
 .producto h3{
     color: #090979;
+}
+#tituloModal{
+    
+    border-left: 5px solid #090979 !important;
+    
 }
 
 #grupoBotones{
@@ -161,11 +178,26 @@ body{
     #login{
         background-color: whitesmoke;
     }
+
+    #login input{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    #login button{
+        margin-bottom: 20px;
+        color: white;
+    }
 /* Fin login */
 
 /* Register */
 #register{
     background-color: whitesmoke;
+}
+#register button{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: white;
 }
 /* Fin register */
 
